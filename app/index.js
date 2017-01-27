@@ -22,6 +22,7 @@ app.use(passport.session());
 app.use(require('./home/router'))
 app.use(require('./auth/router'))
 app.use('/bikes', require('./bikes/router'))
+app.use('/api', require('./api/router'))
 
 // Configure view engine to render Handlebars templates.
 app.set('view engine', 'hbs');
