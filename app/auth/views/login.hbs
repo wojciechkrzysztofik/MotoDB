@@ -1,0 +1,18 @@
+{{!< LAYOUT}}
+
+<div class="container">
+
+  <div class="col-xs-4 col-xs-offset-4">
+    <form class="form-signin" action="/login" method="post">
+      <h2 class="form-signin-heading">Please log in</h2>
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+      <br>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+      <p>{{ message }}</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+    </form>
+  </div>
+
+</div> <!-- /container -->

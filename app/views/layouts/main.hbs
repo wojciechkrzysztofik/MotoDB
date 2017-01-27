@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>MotoDB</title>
+  <meta name="description" content="MotoDB">
+  <meta name="author" content="Wojciech Krzysztofik">
+
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+        <div id="navbar" class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li class="{{#if (active_page page_name 'home')}}active{{/if}}"><a href="/">Home</a></li>
+            <li class="{{#if (active_page page_name 'bikes_list')}}active{{/if}}"><a href="/bikes/list">Bikes list</a></li>
+            <li class="{{#if (active_page page_name 'bikes_add')}}active{{/if}}"><a href="/bikes/add">Add new</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      <div class="navbar-collapse collapse pull-right">
+        <ul class="nav navbar-nav">
+          {{#if user}}
+            <li class="{{#if (active_page page_name 'auth_profile')}}active{{/if}}"><a href="/profile">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+          {{else}}
+            <li><a href="/login">Log in</a></li>
+          {{/if}}
+        </ul>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    {{{body}}}
+
+  </div><!-- /.container -->
+</body>
+</html>

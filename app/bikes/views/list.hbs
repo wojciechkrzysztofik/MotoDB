@@ -1,0 +1,20 @@
+{{!< LAYOUT}}
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Producer</th>
+      <th>Lipsum</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each bikes}}
+      <tr>
+        <td>{{brand}}</td>
+        <td>{{model}}</td>
+        <td>{{engine}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
