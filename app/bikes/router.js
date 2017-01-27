@@ -4,10 +4,14 @@ var router = require('express').Router(),
     join = require('path').join,
     Bike = require('./models/bike');
 
-function getListOfBikesCB(err, result) {
-  if (err) throw err;
-
-  bikes = result;
+function showList(res, req, bikes) {
+  res.render('bikes/views/list',
+  {
+    layout: 'views/layouts/main',
+    page_name: 'bikes_list',
+    bikes: bikes,
+    user: req.user
+  })
 }
 
 function getList(req, res, next) {

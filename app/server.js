@@ -5,6 +5,7 @@ var config = require('./config/config');
 
 // db connection
 mongoose.connect('mongodb://' + config.mongodb.host + '/' + config.mongodb.dbname);
+mongoose.Promise = global.Promise;
 
 // @todo
 //require('./middlewares/auth');
